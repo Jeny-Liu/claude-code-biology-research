@@ -1,0 +1,87 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.eggs/
+
+# Conda
+conda_env/
+*.conda
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Biology data files (large)
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.cram
+*.sam
+*.vcf
+*.vcf.gz
+*.bcf
+*.sra
+*.fa
+*.fasta
+*.fna
+*.ffn
+*.faa
+*.frn
+data/raw/
+data/processed/
+data/external/
+
+# Results (regenerable)
+results/
+figures/
+output/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tiff
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Docker
+.docker/
+
+# Claude Cache
+.claude/.cache/

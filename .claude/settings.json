@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "ncbi-biology": {
+      "command": "uvx",
+      "args": ["ncbi-mcp-server"],
+      "env": {
+        "NCBI_API_KEY": "${NCBI_API_KEY}",
+        "EMAIL": "${EMAIL}"
+      }
+    },
+    "pubmed-mcp": {
+      "command": "npx",
+      "args": ["-y", "pubmed-mcp-server"],
+      "env": {
+        "NCBI_API_KEY": "${NCBI_API_KEY}"
+      }
+    },
+    "uniprot-pdb": {
+      "command": "uvx",
+      "args": ["uniprot-mcp-server"]
+    },
+    "biopython-mcp": {
+      "command": "uvx",
+      "args": ["biopython-mcp-server"]
+    },
+    "r-bioconductor": {
+      "command": "uvx",
+      "args": ["r-bioc-mcp-server"]
+    },
+    "geo-sra": {
+      "command": "uvx",
+      "args": ["geo-mcp-server"],
+      "env": {
+        "NCBI_API_KEY": "${NCBI_API_KEY}"
+      }
+    },
+    "cheminfo": {
+      "command": "uvx",
+      "args": ["cheminformatics-mcp-server"]
+    }
+  },
+  "permissions": {
+    "allow": [
+      "bash",
+      "read",
+      "write",
+      "edit",
+      "glob",
+      "grep"
+    ]
+  }
+}

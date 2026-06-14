@@ -1,0 +1,381 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1100">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap');
+    * { font-family: 'JetBrains Mono', 'Noto Sans SC', 'SF Mono', 'Cascadia Code', monospace; }
+  </style>
+
+  <defs>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid-small" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.3"/>
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Layer Background Gradients -->
+    <linearGradient id="layer1Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(8,51,68,0.25)"/>
+      <stop offset="100%" stop-color="rgba(8,51,68,0.15)"/>
+    </linearGradient>
+    <linearGradient id="layer2Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(6,78,59,0.25)"/>
+      <stop offset="100%" stop-color="rgba(6,78,59,0.15)"/>
+    </linearGradient>
+    <linearGradient id="layer3Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(76,29,149,0.25)"/>
+      <stop offset="100%" stop-color="rgba(76,29,149,0.15)"/>
+    </linearGradient>
+    <linearGradient id="layer4Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(120,53,15,0.25)"/>
+      <stop offset="100%" stop-color="rgba(120,53,15,0.15)"/>
+    </linearGradient>
+    <linearGradient id="layer5Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(136,19,55,0.25)"/>
+      <stop offset="100%" stop-color="rgba(136,19,55,0.15)"/>
+    </linearGradient>
+
+    <!-- Component Gradients -->
+    <linearGradient id="compGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(8,51,68,0.5)"/>
+      <stop offset="100%" stop-color="rgba(8,51,68,0.35)"/>
+    </linearGradient>
+    <linearGradient id="compGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(6,78,59,0.5)"/>
+      <stop offset="100%" stop-color="rgba(6,78,59,0.35)"/>
+    </linearGradient>
+    <linearGradient id="compGrad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(76,29,149,0.5)"/>
+      <stop offset="100%" stop-color="rgba(76,29,149,0.35)"/>
+    </linearGradient>
+    <linearGradient id="compGrad4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(120,53,15,0.5)"/>
+      <stop offset="100%" stop-color="rgba(120,53,15,0.35)"/>
+    </linearGradient>
+    <linearGradient id="compGrad5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(136,19,55,0.5)"/>
+      <stop offset="100%" stop-color="rgba(136,19,55,0.35)"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-violet" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1100" fill="url(#bgGrad)"/>
+  <rect width="1200" height="1100" fill="url(#grid)"/>
+  <rect width="1200" height="1100" fill="url(#grid-small)"/>
+
+  <!-- Title -->
+  <text x="600" y="38" fill="#e2e8f0" font-size="22" font-weight="700" text-anchor="middle" filter="url(#glow)">🧬 Claude Code for Biology Research — Architecture Overview</text>
+  <text x="600" y="58" fill="#94a3b8" font-size="11" text-anchor="middle">AI-Powered Computational Biology Platform</text>
+
+  <!-- ============================================ -->
+  <!-- LAYER 5: DATA SOURCES (Bottom) - y=870 -->
+  <!-- ============================================ -->
+  <!-- Layer Region -->
+  <rect x="40" y="870" width="1120" height="190" rx="12" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.7"/>
+  <rect x="50" y="876" width="200" height="22" rx="4" fill="rgba(136,19,55,0.6)"/>
+  <text x="150" y="891" fill="#fb7185" font-size="11" font-weight="600" text-anchor="middle">LAYER 5 — DATA SOURCES</text>
+
+  <!-- Data Source components -->
+  <g transform="translate(90, 920)">
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="url(#compGrad5)" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="85" y="28" fill="#f1f5f9" font-size="11" font-weight="600" text-anchor="middle" filter="url(#glow)">🧬 GenBank / NCBI</text>
+    <text x="85" y="46" fill="#fda4af" font-size="8" text-anchor="middle">Nucleotide sequences</text>
+    <text x="85" y="60" fill="#fda4af" font-size="8" text-anchor="middle">Genome annotations</text>
+  </g>
+
+  <g transform="translate(300, 920)">
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="url(#compGrad5)" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="85" y="28" fill="#f1f5f9" font-size="11" font-weight="600" text-anchor="middle" filter="url(#glow)">🔬 PDB / UniProt</text>
+    <text x="85" y="46" fill="#fda4af" font-size="8" text-anchor="middle">Protein structures</text>
+    <text x="85" y="60" fill="#fda4af" font-size="8" text-anchor="middle">Protein functions</text>
+  </g>
+
+  <g transform="translate(510, 920)">
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="url(#compGrad5)" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="85" y="28" fill="#f1f5f9" font-size="11" font-weight="600" text-anchor="middle" filter="url(#glow)">📚 PubMed / PMC</text>
+    <text x="85" y="46" fill="#fda4af" font-size="8" text-anchor="middle">Biomedical literature</text>
+    <text x="85" y="60" fill="#fda4af" font-size="8" text-anchor="middle">Full-text articles</text>
+  </g>
+
+  <g transform="translate(720, 920)">
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="url(#compGrad5)" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="85" y="28" fill="#f1f5f9" font-size="11" font-weight="600" text-anchor="middle" filter="url(#glow)">📊 Public Repos</text>
+    <text x="85" y="46" fill="#fda4af" font-size="8" text-anchor="middle">GEO / SRA / ArrayExpress</text>
+    <text x="85" y="60" fill="#fda4af" font-size="8" text-anchor="middle">ENCODE / Roadmap</text>
+  </g>
+
+  <g transform="translate(930, 920)">
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="170" height="70" rx="8" fill="url(#compGrad5)" stroke="#fb7185" stroke-width="1.5"/>
+    <text x="85" y="28" fill="#f1f5f9" font-size="11" font-weight="600" text-anchor="middle" filter="url(#glow)">🧪 Local Lab Data</text>
+    <text x="85" y="46" fill="#fda4af" font-size="8" text-anchor="middle">FASTQ / BAM / VCF files</text>
+    <text x="85" y="60" fill="#fda4af" font-size="8" text-anchor="middle">ELN / LIMS systems</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LAYER 4: MCP SERVERS - y=660 -->
+  <!-- ============================================ -->
+  <!-- Layer Region -->
+  <rect x="40" y="660" width="1120" height="175" rx="12" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.7"/>
+  <rect x="50" y="666" width="200" height="22" rx="4" fill="rgba(120,53,15,0.6)"/>
+  <text x="150" y="681" fill="#fbbf24" font-size="11" font-weight="600" text-anchor="middle">LAYER 4 — MCP SERVERS (Biology Tools)</text>
+
+  <!-- MCP components -->
+  <g transform="translate(60, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">🧬 NCBI / BLAST</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">Sequence search &amp; alignment</text>
+  </g>
+
+  <g transform="translate(240, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">🔬 UniProt / PDB</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">Protein data &amp; structures</text>
+  </g>
+
+  <g transform="translate(420, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">🐍 BioPython</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">Biological computation</text>
+  </g>
+
+  <g transform="translate(600, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">📊 R / Bioconductor</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">Statistical omics</text>
+  </g>
+
+  <g transform="translate(780, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">🧪 Lab Data MCP</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">ELN / LIMS integration</text>
+  </g>
+
+  <g transform="translate(960, 710)">
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="160" height="60" rx="8" fill="url(#compGrad4)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="25" fill="#fef9c3" font-size="10" font-weight="600" text-anchor="middle">🧪 Chem Tools</text>
+    <text x="80" y="44" fill="#fde68a" font-size="8" text-anchor="middle">Cheminformatics &amp; docking</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LAYER 3: BIOLOGY SKILLS - y=460 -->
+  <!-- ============================================ -->
+  <!-- Layer Region -->
+  <rect x="40" y="460" width="1120" height="165" rx="12" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.7"/>
+  <rect x="50" y="466" width="200" height="22" rx="4" fill="rgba(76,29,149,0.6)"/>
+  <text x="150" y="481" fill="#a78bfa" font-size="11" font-weight="600" text-anchor="middle">LAYER 3 — BIOLOGY SKILLS</text>
+
+  <!-- Skill components -->
+  <g transform="translate(60, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">🧬 Sequence Analysis</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">DNA/RNA/protein analysis</text>
+  </g>
+
+  <g transform="translate(245, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">📚 Literature Review</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">PubMed search &amp; summarization</text>
+  </g>
+
+  <g transform="translate(430, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">📋 Protocol Design</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">Experimental workflow design</text>
+  </g>
+
+  <g transform="translate(615, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">🖼️ Image Analysis</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">Microscopy &amp; gel imaging</text>
+  </g>
+
+  <g transform="translate(800, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">📈 Data Visualization</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">Publication-quality figures</text>
+  </g>
+
+  <g transform="translate(985, 515)">
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="155" height="60" rx="8" fill="url(#compGrad3)" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="77" y="25" fill="#ddd6fe" font-size="10" font-weight="600" text-anchor="middle">📊 Statistical Analysis</text>
+    <text x="77" y="44" fill="#c4b5fd" font-size="8" text-anchor="middle">Hypothesis testing &amp; modeling</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LAYER 2: CLAUDE CODE CORE - y=260 -->
+  <!-- ============================================ -->
+  <!-- Layer Region -->
+  <rect x="40" y="260" width="1120" height="165" rx="12" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.7"/>
+  <rect x="50" y="266" width="220" height="22" rx="4" fill="rgba(6,78,59,0.6)"/>
+  <text x="160" y="281" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle">LAYER 2 — CLAUDE CODE CORE</text>
+
+  <!-- Core component - large center -->
+  <g transform="translate(420, 310)" filter="url(#glow)">
+    <rect x="0" y="0" width="360" height="90" rx="12" fill="#0f172a"/>
+    <rect x="0" y="0" width="360" height="90" rx="12" fill="url(#compGrad2)" stroke="#34d399" stroke-width="2"/>
+    <text x="180" y="30" fill="#d1fae5" font-size="13" font-weight="700" text-anchor="middle">🤖 Claude Code Engine</text>
+    <text x="180" y="50" fill="#a7f3d0" font-size="9" text-anchor="middle">AI-Powered Code Generation &amp; Analysis for Biology</text>
+    <text x="180" y="68" fill="#6ee7b7" font-size="9" text-anchor="middle">🔹 Natural Language Interface  🔹 Context Understanding</text>
+    <text x="180" y="84" fill="#6ee7b7" font-size="9" text-anchor="middle">🔹 Autonomous Workflows  🔹 Multi-modal File Support</text>
+  </g>
+
+  <!-- Side features -->
+  <g transform="translate(100, 315)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="url(#compGrad2)" stroke="#34d399" stroke-width="1.2"/>
+    <text x="70" y="22" fill="#d1fae5" font-size="9" font-weight="600" text-anchor="middle">💬 Natural Language</text>
+    <text x="70" y="38" fill="#a7f3d0" font-size="8" text-anchor="middle">Chat-driven analysis</text>
+  </g>
+
+  <g transform="translate(100, 375)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="url(#compGrad2)" stroke="#34d399" stroke-width="1.2"/>
+    <text x="70" y="22" fill="#d1fae5" font-size="9" font-weight="600" text-anchor="middle">🔧 Automation</text>
+    <text x="70" y="38" fill="#a7f3d0" font-size="8" text-anchor="middle">Script generation</text>
+  </g>
+
+  <g transform="translate(960, 315)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="url(#compGrad2)" stroke="#34d399" stroke-width="1.2"/>
+    <text x="70" y="22" fill="#d1fae5" font-size="9" font-weight="600" text-anchor="middle">🤝 Collaboration</text>
+    <text x="70" y="38" fill="#a7f3d0" font-size="8" text-anchor="middle">Version control</text>
+  </g>
+
+  <g transform="translate(960, 375)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="url(#compGrad2)" stroke="#34d399" stroke-width="1.2"/>
+    <text x="70" y="22" fill="#d1fae5" font-size="9" font-weight="600" text-anchor="middle">🐛 Debug &amp; Test</text>
+    <text x="70" y="38" fill="#a7f3d0" font-size="8" text-anchor="middle">Code validation</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LAYER 1: USER INTERFACE (Top) - y=80 -->
+  <!-- ============================================ -->
+  <!-- Layer Region -->
+  <rect x="40" y="80" width="1120" height="145" rx="12" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.7"/>
+  <rect x="50" y="86" width="200" height="22" rx="4" fill="rgba(8,51,68,0.6)"/>
+  <text x="150" y="101" fill="#22d3ee" font-size="11" font-weight="600" text-anchor="middle">LAYER 1 — USER INTERFACE</text>
+
+  <!-- UI components -->
+  <g transform="translate(90, 130)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="url(#compGrad1)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="120" y="30" fill="#cffafe" font-size="12" font-weight="600" text-anchor="middle">⌨️ Terminal / CLI</text>
+    <text x="120" y="48" fill="#a5f3fc" font-size="9" text-anchor="middle">Primary command-line interface</text>
+    <text x="120" y="62" fill="#67e8f9" font-size="8" text-anchor="middle">Full power, all features</text>
+  </g>
+
+  <g transform="translate(480, 130)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="url(#compGrad1)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="120" y="30" fill="#cffafe" font-size="12" font-weight="600" text-anchor="middle">🖥️ VS Code Extension</text>
+    <text x="120" y="48" fill="#a5f3fc" font-size="9" text-anchor="middle">IDE-integrated AI assistant</text>
+    <text x="120" y="62" fill="#67e8f9" font-size="8" text-anchor="middle">Inline code assistance</text>
+  </g>
+
+  <g transform="translate(870, 130)">
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="#0f172a"/>
+    <rect x="0" y="0" width="240" height="70" rx="8" fill="url(#compGrad1)" stroke="#22d3ee" stroke-width="1.5"/>
+    <text x="120" y="30" fill="#cffafe" font-size="12" font-weight="600" text-anchor="middle">🌐 Claude Desktop App</text>
+    <text x="120" y="48" fill="#a5f3fc" font-size="9" text-anchor="middle">Desktop application</text>
+    <text x="120" y="62" fill="#67e8f9" font-size="8" text-anchor="middle">Multi-modal interactions</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CONNECTION ARROWS -->
+  <!-- ============================================ -->
+
+  <!-- Layer 1 → Layer 2 arrows -->
+  <path d="M 210,200 L 210,235 L 500,235 L 500,308" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-cyan)"/>
+  <path d="M 600,200 L 600,308" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-cyan)"/>
+  <path d="M 990,200 L 990,235 L 700,235 L 700,308" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-cyan)"/>
+
+  <!-- Layer 2 → Layer 3 arrows -->
+  <path d="M 600,400 L 600,458" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-emerald)"/>
+  <path d="M 250,365 L 250,390 L 137,390 L 137,513" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-emerald)"/>
+  <path d="M 950,365 L 950,390 L 1062,390 L 1062,513" fill="none" stroke="#34d399" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-emerald)"/>
+
+  <!-- Layer 3 → Layer 4 arrows -->
+  <path d="M 140,575 L 140,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+  <path d="M 325,575 L 325,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+  <path d="M 500,575 L 500,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+  <path d="M 695,575 L 695,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+  <path d="M 880,575 L 880,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+  <path d="M 1060,575 L 1060,708" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-violet)"/>
+
+  <!-- Layer 4 → Layer 5 arrows -->
+  <path d="M 140,770 L 140,810 L 175,810 L 175,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+  <path d="M 320,770 L 320,810 L 385,810 L 385,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+  <path d="M 500,770 L 500,810 L 595,810 L 595,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+  <path d="M 680,770 L 680,810 L 805,810 L 805,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+  <path d="M 860,770 L 860,810 L 1015,810 L 1015,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+  <path d="M 1040,770 L 1040,918" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.6" marker-end="url(#arrow-amber)"/>
+
+  <!-- ============================================ -->
+  <!-- LEGEND -->
+  <!-- ============================================ -->
+  <g transform="translate(40, 1060)">
+    <rect x="0" y="0" width="1120" height="30" rx="6" fill="rgba(30,41,59,0.6)"/>
+    <rect x="20" y="10" width="100" height="12" rx="3" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/>
+    <text x="70" y="19" fill="#22d3ee" font-size="7" text-anchor="middle">UI Layer</text>
+    <rect x="150" y="10" width="100" height="12" rx="3" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+    <text x="200" y="19" fill="#34d399" font-size="7" text-anchor="middle">Core Engine</text>
+    <rect x="280" y="10" width="100" height="12" rx="3" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/>
+    <text x="330" y="19" fill="#a78bfa" font-size="7" text-anchor="middle">Biology Skills</text>
+    <rect x="410" y="10" width="100" height="12" rx="3" fill="rgba(120,53,15,0.4)" stroke="#fbbf24" stroke-width="1"/>
+    <text x="460" y="19" fill="#fbbf24" font-size="7" text-anchor="middle">MCP Servers</text>
+    <rect x="540" y="10" width="100" height="12" rx="3" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/>
+    <text x="590" y="19" fill="#fb7185" font-size="7" text-anchor="middle">Data Sources</text>
+    <text x="720" y="19" fill="#64748b" font-size="8">Data Flow: Top → Bottom</text>
+  </g>
+</svg>
