@@ -1,7 +1,5 @@
 <div align="center">
-  <br/>
-  <img src="assets/diagrams/architecture-overview.svg" alt="Claude Code for Biology Research" width="800">
-  <br/>
+
   <h1>🧬 Claude Code for Biology Research</h1>
   <p>
     <strong>A comprehensive guide to using Claude Code as an AI-powered assistant for computational biology, bioinformatics, and biomedical research</strong>
@@ -19,6 +17,9 @@
     <a href="https://modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP-a78bfa?style=flat-square" alt="MCP"/></a>
     <a href="https://github.com/Jeny-Liu/claude-code-biology-research"><img src="https://img.shields.io/github/stars/Jeny-Liu/claude-code-biology-research?style=flat-square" alt="Stars"/></a>
   </p>
+  <br/>
+    <br/>
+  <img src="assets/diagrams/architecture-overview.svg" alt="Claude Code for Biology Research" width="800">
   <br/>
 </div>
 
